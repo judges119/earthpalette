@@ -94,7 +94,7 @@ renderPM.drawToFile(drawing, 'world_colour.png', fmt='PNG')
 client = pytumblr.TumblrRestClient(
     os.environ.get('CONSUMER_KEY'),
     os.environ.get('CONSUMER_SECRET'),
-    os.environ.get('OAUTH_KEY'),
+    os.environ.get('OAUTH_TOKEN'),
     os.environ.get('OAUTH_SECRET')
 )
 client.create_photo('earthpalettes', state="published", tags=["palette", "sentinel"], format="markdown",

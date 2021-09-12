@@ -10,7 +10,7 @@ runEarthPalette:
     - pip3 install -r requirements.txt
     - CONSUMER_KEY=$CONSUMER_KEY
     - CONSUMER_SECRET=$CONSUMER_SECRET
-    - OAUTH_KEY=$OAUTH_KEY
+    - OAUTH_TOKEN=$OAUTH_TOKEN
     - OAUTH_SECRET=$OAUTH_SECRET
     - python3 earthpalette.py
   # only:
