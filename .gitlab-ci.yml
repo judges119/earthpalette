@@ -5,11 +5,11 @@ runEarthPalette:
   image: osgeo/gdal:alpine-normal-latest
   stage: run
   script:
-    - pip install -r requirements.txt
+    - pip3 install -r requirements.txt
     - CONSUMER_KEY=$CONSUMER_KEY
     - CONSUMER_SECRET=$CONSUMER_SECRET
     - OAUTH_KEY=$OAUTH_KEY
     - OAUTH_SECRET=$OAUTH_SECRET
-    - python earthpalette.py
+    - python3 earthpalette.py
   # only:
   #   -schedules
