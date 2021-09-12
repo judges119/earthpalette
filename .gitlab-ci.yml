@@ -5,6 +5,7 @@ runEarthPalette:
   image: osgeo/gdal:alpine-normal-latest
   stage: run
   script:
+    - apk add py3-pip
     - pip3 install -r requirements.txt
     - CONSUMER_KEY=$CONSUMER_KEY
     - CONSUMER_SECRET=$CONSUMER_SECRET
