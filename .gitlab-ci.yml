@@ -14,4 +14,4 @@ runEarthPalette:
     - OAUTH_SECRET=$OAUTH_SECRET
     - python3 earthpalette.py
   only:
-    -schedules
+    - schedules
