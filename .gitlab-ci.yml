@@ -5,6 +5,7 @@ runEarthPalette:
   image: osgeo/gdal:ubuntu-small-latest
   stage: run
   script:
+    - apt update
     - apt install -y python3-pip
     - pip3 install -r requirements.txt
     - CONSUMER_KEY=$CONSUMER_KEY
