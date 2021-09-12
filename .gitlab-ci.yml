@@ -2,10 +2,10 @@ stages:
   - run
 
 runEarthPalette:
-  image: osgeo/gdal:alpine-normal-latest
+  image: osgeo/gdal:ubuntu-small-latest
   stage: run
   script:
-    - apk add py3-pip py3-wheel libxml2-dev libxslt-dev
+    - apt install python3-pip
     - pip3 install -r requirements.txt
     - CONSUMER_KEY=$CONSUMER_KEY
     - CONSUMER_SECRET=$CONSUMER_SECRET
