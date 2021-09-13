@@ -79,9 +79,12 @@ colours = colorgram.extract('./world-bright.png', 6)
 
 # Generate an SVG showing the palette
 svg = '<svg width="585" height="100">'
+rgb_string = ''
 l = 0
 for colour in colours:
     svg += '<rect x="' + str(l) + '" y="0" width="100" height="100" style="fill:' + ('#%02x%02x%02x' % colour.rgb) + ';stroke-width:3;stroke:rgb(0,0,0)" />'
+    rgb_string += '* ' + ('#%02x%02x%02x' % colour.rgb) + ' or ' + str(colour.rgb.r) + ', ' + str(colour.rgb.g) + ', ' + str(colour.rgb.b) + '\n'
+    
     l += 97
 svg += '</svg>'
 with open('world_colour.svg', 'w') as f:
@@ -105,7 +108,10 @@ client.create_photo('earthpalettes', state="published", tags=["palette", "sentin
 
 Location between: %g, %g and %g, %g in WGS84 coordinates (EPSG:4326).
 
+Colour RGB values (L-R):
+%s
+
 This image is from a mosaic of Sentinel-2 images taken in 2020 with the clouds removed, provided by EOX through their [Sentinel-2 Cloudless](https://s2maps.eu/) service.
 
 You can read more about how this is done [on my website](https://az.id.au/dev/earth-palettes/).
-''' % (y_min, x_min, y_min + step, x_min + step))
+''' % (y_min, x_min, y_min + step, x_min + step, rgb_string))
