@@ -78,7 +78,7 @@ im_output.save('world-bright.png')
 colours = colorgram.extract('./world-bright.png', 6)
 
 # Generate an SVG showing the palette
-svg = '<svg width="582" height="100">'
+svg = '<svg width="585" height="100">'
 l = 0
 for colour in colours:
     svg += '<rect x="' + str(l) + '" y="0" width="100" height="100" style="fill:' + ('#%02x%02x%02x' % colour.rgb) + ';stroke-width:3;stroke:rgb(0,0,0)" />'
