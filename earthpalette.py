@@ -83,7 +83,9 @@ rgb_string = ''
 l = 0
 for colour in colours:
     svg += '<rect x="' + str(l) + '" y="0" width="100" height="100" style="fill:' + ('#%02x%02x%02x' % colour.rgb) + ';stroke-width:3;stroke:rgb(0,0,0)" />'
-    rgb_string += '* ' + ('#%02x%02x%02x' % colour.rgb) + ' or ' + str(colour.rgb.r) + ', ' + str(colour.rgb.g) + ', ' + str(colour.rgb.b) + '\n'
+    rgb_string += '* ' + ('#%02x%02x%02x' % colour.rgb) + ' or ' + str(colour.rgb.r) + ', ' + str(colour.rgb.g) + ', ' + str(colour.rgb.b) + '''
+
+'''
     
     l += 97
 svg += '</svg>'
