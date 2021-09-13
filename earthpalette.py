@@ -106,4 +106,6 @@ client.create_photo('earthpalettes', state="published", tags=["palette", "sentin
 Location between: %g, %g and %g, %g in WGS84 coordinates (EPSG:4326).
 
 This image is from a mosaic of Sentinel-2 images taken in 2020 with the clouds removed, provided by EOX through their [Sentinel-2 Cloudless](https://s2maps.eu/) service.
+
+You can read more about how this is done [on my website](https://az.id.au/dev/earth-palettes/).
 ''' % (y_min, x_min, y_min + step, x_min + step))
